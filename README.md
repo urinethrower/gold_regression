@@ -37,7 +37,7 @@ Multivariate regression model on gold price
 
 ## Final Thoughts
 * Improvement from linear to multivariate regression after adding the extra variable of oil stock is negligible
-* While my initial hypothesis for a negative correlation between oil stock and gold price was proven to be correct by the regression model, the coefficient was  quite small: **y** = 1738.28 - 353 **X1** - 0.00021 **X2**, where **X1** being real yield (%), and **X2** being oil stock (kbbl)
+* While my initial hypothesis for a negative correlation between oil stock and gold price was proven to be correct by the regression model, the coefficient was  quite small: **y** = 1738.28 - 353**X1** - 0.00021**X2**, where **X1** being real yield (%), and **X2** being oil stock (kbbl)
 
 ## Resources Used
 * Python library packages: yfinance, sklearn, numpy, pandas, json, seaborn & matplotlib
