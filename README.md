@@ -37,5 +37,5 @@ Multivariate regression model on gold price
 
 ## Resources Used
 * Python library packages: yfinance, sklearn, numpy, pandas, json, seaborn & matplotlib
-* API provided by Federal Reserve Economic Data from St. Louis Fed, U.S. Energy Information Administration
-* Historical price data downloaded from Yahoo! Finance
+* API provided by **Federal Reserve Economic Data from St. Louis Fed (FRED)**, **U.S. Energy Information Administration (EIA)**
+* Historical price data downloaded from **Yahoo! Finance**
