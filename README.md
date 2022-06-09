@@ -11,6 +11,11 @@ Multivariate regression model on gold price
 * Historical gold prices were downloaded from Yahoo Finance using `yfinance` library
 * Data for Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity was collected from **St. Louis Fed**, retrieving JSON object by API call
 * Data for ending crude oil stocks in Cushing Oklahoma (WTI storage) was collected from **U.S. EIA**, also by retrieving JSON object from API call
+  
+## Reasons for choosing the predictor variables
+* From a **fundamental** perspective, gold has long been considered as an inflation hedge and a hedge against fiat currencies. Whereas inflation adjusted treasury yield (real yield) can be considered as returns on investing in USD. Therefore, it is expected that these 2 should be inversely-correlated (given gold prices are measured in USD terms)
+* Since Nixon ended the USD-gold peg in 1971, USD has entered into a new era of petrodollar system where USD is "pseudo-pegged" with crude oil. While US started as an oil-importing country, it became a net-exporting country after the 2006 shale revolution (albeit hugely affected by green polocies in recent years). My macro thesis is therefore: the more stock US holds in crude, the more it can export thus raising demand for USD among oil-importing countries; as USD strength is inversely-related to gold/$, crude stock should also be inversely-related against gold price
+* From a **technical** perspective, an inversed version of the "cup and handle" pattern in gold was observed in both real yield and crude stock graphs as in above section, starting from mid-2014 to 2022
 
 ## Data Cleaning
 * Non numerical data was observed from FRED's data, which was converted to `np.nan`
@@ -21,11 +26,7 @@ Multivariate regression model on gold price
 ![cushingOK](https://user-images.githubusercontent.com/106392189/172881913-5df5d913-a498-453e-8f28-1b1105f1bd51.png)
 * And the gold prices in USD:  
 ![gold](https://user-images.githubusercontent.com/106392189/172880725-c9e9519d-73a6-4b22-bfa6-c6a74bd99ccb.png)
-  
-## Reasons for the choice of predictor variables
-* From a **fundamental** perspective, gold has long been considered as an inflation hedge and a hedge against fiat currencies. Whereas inflation adjusted treasury yield (real yield) can be considered as returns on investing in USD. Therefore, it is expected that these 2 should be inversely-correlated (given gold prices are measured in USD terms)
-* Since Nixon ended the USD-gold peg in 1971, USD has entered into a new era of petrodollar system where USD is "pseudo-pegged" with crude oil. While US started as an oil-importing country, it became a net-exporting country after the 2006 shale revolution (albeit hugely affected by green polocies in recent years). My macro thesis is therefore: the more stock US holds in crude, the more it can export thus raising demand for USD among oil-importing countries; as USD strength is inversely-related to gold/$, crude stock should also be inversely-related against gold price
-* From a **technical** perspective, an inversed version of the "cup and handle" pattern in gold was observed in both real yield and crude stock graphs as in above section, starting from mid-2014 to 2022
+
 
 ## Modelling
 * Based on above analysis, range of data was determined to be starting from 2006 till now
