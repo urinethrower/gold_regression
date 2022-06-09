@@ -32,7 +32,7 @@ Multivariate regression model on gold price
 * **Linear regression model** (X = real yield; y = gold price; frequency = daily) was fitted first, measured **R-sqr = 0.86**, **RMSE = 215.01**
 * **Multivariate regression model** (X = real yield, Cushing crude oil storage; y = gold price; frequency = weekly) was fitted next hoping to improve on modelling quality. Measured **R-sqr = 0.87**, **RMSE = 220.43**
 * Comparison between actual and predicted gold prices for both models are plotted as follows:
-* [left = linear; right = multivariate]  
+[left = linear; right = multivariate]  
 ![linear model](https://user-images.githubusercontent.com/106392189/172914317-112b4cbe-3886-4eb2-aef5-bc9517590a02.png)
 ![multi reg model](https://user-images.githubusercontent.com/106392189/172914325-e4a0a4a1-10a9-4e12-85bd-3b1b5bca2b58.png)
 
