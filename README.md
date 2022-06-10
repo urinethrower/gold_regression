@@ -5,7 +5,8 @@ Multivariate regression model on gold price (Jan 2006 - Jun 2022)
 * Linear regression model, and multivariate regression model built on Python for gold price valuation
 * Data collected from FRED and EIA by calling API and parsing JSON objects
 * Data processed using pandas, modelled using scikit-learn and visualised with seaborn
-* 15 years worth of gold price was modelled with a R<sup>2</sup> value of 0.87 using fundamentally-sound macroeconomic data
+* Selection of model predictors were based on both fundamental and technical backgrounds
+* 15 years worth of gold price was modelled with a R<sup>2</sup> value of 0.87
 
 ## Data Collection
 * Historical gold prices were downloaded from Yahoo Finance using `yfinance` library
