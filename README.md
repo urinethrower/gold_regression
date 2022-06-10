@@ -1,5 +1,5 @@
 # Gold Regression
-Multivariate regression model on gold price
+Multivariate regression model on gold price (Jan 2006 - Jun 2022)
 
 ## Overview
 * Linear regression model, and multivariate regression model built on Python for gold price valuation
