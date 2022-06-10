@@ -36,9 +36,10 @@ Multivariate regression model on gold price
 ![multi reg model](https://user-images.githubusercontent.com/106392189/172914325-e4a0a4a1-10a9-4e12-85bd-3b1b5bca2b58.png)
 
 ## Final Thoughts
-* Improvement from linear to multivariate regression after adding the extra variable of oil stock is negligible
-* While my initial hypothesis for a negative correlation between oil stock and gold price was proven to be correct by the regression model, the coefficient was  quite small: **y** = 1738.28 - 353**X<sub>1</sub>** - 0.00021**X<sub>2</sub>**, where **X<sub>1</sub>** being real yield (%), and **X<sub>2</sub>** being oil stock (kbbl)
-> whatsup
+* Improvement from linear to multivariate regression after adding the oil stock variable was little, which shows that crude storage was not a useful predictor for gold price
+* Separate linear regression model (X = Cushing crude oil storage; y = gold price) was fitted, measured R<sup>2</sup> = 0.24. Which further disprove their relationship - at least for the time period modelled
+* While my initial hypothesis for a negative correlation between oil stock and gold price was proven to be correct by the regression model, the fitted coefficient was almost negligible: **y** = 1738.28 - 353**X<sub>1</sub>** - 0.00021**X<sub>2</sub>**, where **X<sub>1</sub>** being real yield (%), and **X<sub>2</sub>** being oil stock (kbbl)
+
 ## Resources Used
 * Python library packages: yfinance, sklearn, numpy, pandas, json, seaborn & matplotlib
 * API provided by Federal Reserve Economic Data from St. Louis Fed (**FRED**), U.S. Energy Information Administration (**EIA**)
