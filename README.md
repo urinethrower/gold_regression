@@ -29,15 +29,15 @@ Multivariate regression model on gold price
 
 ## Modelling
 * Based on above analysis, range of data was determined to be starting from 2006 till now
-* [**Linear regression model**](https://github.com/urinethrower/gold_regression/blob/main/linear%20gold.py) (X = real yield; y = gold price; frequency = daily) was fitted first, measured **R^2^ = 0.86**, **RMSE = $215.01**
-* [**Multivariate regression model**](https://github.com/urinethrower/gold_regression/blob/main/multivar%20reg%20gold.py) (X = real yield, Cushing crude oil storage; y = gold price; frequency = weekly) was fitted next hoping to improve on modelling quality. Measured **R^2^ = 0.87**, **RMSE = $220.43**
+* [**Linear regression model**](https://github.com/urinethrower/gold_regression/blob/main/linear%20gold.py) (X = real yield; y = gold price; frequency = daily) was fitted first, measured **R<sup>2</sup> = 0.86**, **RMSE = $215.01**
+* [**Multivariate regression model**](https://github.com/urinethrower/gold_regression/blob/main/multivar%20reg%20gold.py) (X = real yield, Cushing crude oil storage; y = gold price; frequency = weekly) was fitted next hoping to improve on modelling quality. Measured **R<sup>2</sup> = 0.87**, **RMSE = $220.43**
 * Comparison between actual and predicted gold prices for both models are plotted as follows:  
 ![linear model](https://user-images.githubusercontent.com/106392189/172914317-112b4cbe-3886-4eb2-aef5-bc9517590a02.png)
 ![multi reg model](https://user-images.githubusercontent.com/106392189/172914325-e4a0a4a1-10a9-4e12-85bd-3b1b5bca2b58.png)
 
 ## Final Thoughts
 * Improvement from linear to multivariate regression after adding the extra variable of oil stock is negligible
-* While my initial hypothesis for a negative correlation between oil stock and gold price was proven to be correct by the regression model, the coefficient was  quite small: **y** = 1738.28 - 353**X~1~** - 0.00021**X~2~**, where **X~1~** being real yield (%), and **X~2~** being oil stock (kbbl)
+* While my initial hypothesis for a negative correlation between oil stock and gold price was proven to be correct by the regression model, the coefficient was  quite small: **y** = 1738.28 - 353**X<sub>1</sub>** - 0.00021**X<sub>2</sub>**, where **X<sub>1</sub>** being real yield (%), and **X<sub>2</sub>** being oil stock (kbbl)
 
 ## Resources Used
 * Python library packages: yfinance, sklearn, numpy, pandas, json, seaborn & matplotlib
