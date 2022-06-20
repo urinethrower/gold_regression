@@ -2,6 +2,7 @@
 from cmath import sqrt
 from sklearn import linear_model
 from sklearn.impute import KNNImputer
+import statsmodels.api as sm
 import yfinance as yf
 from email.utils import parsedate
 import json
@@ -84,6 +85,10 @@ X = cln_df['2006':][['real_yield','stock(kbbl)']]
 y = cln_df['2006':]['close']
 reg.fit(X, y)
 reg.score(X, y)
+results = sm.OLS(y, X).fit()
+print(results.summary())
+
+#%% 
 feed = cln_df[['real_yield','stock(kbbl)']].to_numpy()
 feed = feed.reshape(-1,2)
 model = pd.DataFrame(reg.predict(feed), columns=['predicted_close'])
