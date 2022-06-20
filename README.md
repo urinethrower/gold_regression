@@ -30,6 +30,7 @@ Multivariate regression model on gold price (Jan 2006 - Jun 2022)
 
 ## Modelling
 * Based on above analysis, range of data was determined to be starting from 2006 till now
+* Using statsmodels package, both predictor variables passed the p-test (0.000 for both)
 * [**Linear regression model**](https://github.com/urinethrower/gold_regression/blob/main/linear%20gold.py) (X = real yield; y = gold price; frequency = daily) was fitted first, measured **R<sup>2</sup> = 0.86**, **RMSE = $215.01**
 * [**Multivariate regression model**](https://github.com/urinethrower/gold_regression/blob/main/multivar%20reg%20gold.py) (X = real yield, Cushing crude oil storage; y = gold price; frequency = weekly) was fitted next hoping to improve on modelling quality. Measured **R<sup>2</sup> = 0.87**, **RMSE = $220.43**
 * Comparison between actual and predicted gold prices for both models are plotted as follows:  
@@ -45,6 +46,6 @@ Multivariate regression model on gold price (Jan 2006 - Jun 2022)
 * Note that coefficient of -0.00021 is actually not a small number as crude stock often comes in millions of kbbl
 
 ## Resources Used
-* Python library packages: yfinance, sklearn, numpy, pandas, json, seaborn & matplotlib
+* Python library packages: yfinance, sklearn, numpy, pandas, json, statsmodels.api, seaborn & matplotlib
 * API provided by Federal Reserve Economic Data from St. Louis Fed (**FRED**), U.S. Energy Information Administration (**EIA**)
 * Historical price data downloaded from **Yahoo! Finance**
